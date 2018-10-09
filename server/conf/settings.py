@@ -33,9 +33,52 @@ from evennia.settings_default import *
 
 # This is the name of your game. Make it catchy!
 SERVERNAME = "Polybius"
-WEBSERVER_PORTS = [(80, 4005)]
 
+# Server ports. If enabled and marked as "visible", the port
+# should be visible to the outside world on a production server.
+# Note that there are many more options available beyond these.
 
+# Telnet ports. Visible.
+TELNET_ENABLED = True
+TELNET_PORTS = [4000]
+# (proxy, internal). Only proxy should be visible.
+WEBSERVER_ENABLED = True
+WEBSERVER_PORTS = [(80, 4002)]
+# Telnet+SSL ports, for supporting clients. Visible.
+SSL_ENABLED = False
+SSL_PORTS = [4003]
+# SSH client ports. Requires crypto lib. Visible.
+SSH_ENABLED = False
+SSH_PORTS = [4004]
+# Websocket-client port. Visible.
+WEBSOCKET_CLIENT_ENABLED = True
+WEBSOCKET_CLIENT_PORT = 4005
+# Internal Server-Portal port. Not visible.
+AMP_PORT = 4006
+
+######################################################################
+# Contrib config
+######################################################################
+
+GAME_INDEX_LISTING = {
+    'game_status': 'pre-alpha',
+    # Optional, comment out or remove if N/A
+    'game_website': 'http://www.swagsociety.me',
+    'short_description': 'Twitch based fantasy MUD, with a in game cryptocurrency.',
+    # Optional but highly recommended. Markdown is supported.
+    'long_description': (
+        "Hello, there. You silly person.\n\n"
+        "This is the start of a new paragraph. Markdown is cool. Isn't this "
+        "[neat](http://evennia.com)? My game is best game. Woohoo!\n\n"
+        "Time to wrap this up. One final paragraph for the road."
+    ),
+    'listing_contact': 'swagunclesam@gmail.com',
+    # At minimum, specify this or the web_client_url options. Both is fine, too.
+    'telnet_hostname': 'swagsociety.me',
+    'telnet_port': 4000,
+    # At minimum, specify this or the telnet_* options. Both is fine, too.
+    'web_client_url': 'http://www.swagsociety.me/webclient',
+}
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
