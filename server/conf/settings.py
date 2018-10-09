@@ -79,6 +79,24 @@ GAME_INDEX_LISTING = {
     # At minimum, specify this or the telnet_* options. Both is fine, too.
     'web_client_url': 'http://www.swagsociety.me/webclient',
 }
+
+
+######################################################################
+# External Channel connections
+######################################################################
+
+# Note: You do *not* have to make your MUD open to
+# the public to use the external connections, they
+# operate as long as you have an internet connection,
+# just like stand-alone chat clients. IRC requires
+# that you have twisted.words installed.
+
+# Evennia can connect to external IRC channels and
+# echo what is said on the channel to IRC and vice
+# versa. Obs - make sure the IRC network allows bots.
+# When enabled, command @irc2chan will be available in-game
+IRC_ENABLED = True
+
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
