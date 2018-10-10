@@ -10,5 +10,5 @@ install:
   - cd $TRAVIS_BUILD_DIR
 script:
   - evennia migrate
-  - evennia --settings settings.py test $TRAVIS_BUILD_DIR
+  - evennia --settings settings.py test Polybius
   - evennia --settings settings.py test .
