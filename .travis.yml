@@ -11,4 +11,4 @@ install:
 script:
   - evennia migrate
   - evennia --settings settings.py test evennia
-  - evennia --settings settings.py test
+  - evennia test Polybius
