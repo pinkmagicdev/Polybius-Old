@@ -55,7 +55,25 @@ WEBSOCKET_CLIENT_ENABLED = True
 WEBSOCKET_CLIENT_PORT = 4005
 # Internal Server-Portal port. Not visible.
 AMP_PORT = 4006
+INSTALLED_APPS += (
+        'django.contrib.humanize',
+        'django_nyt',
+        'mptt',        
+        'sorl.thumbnail',
+        'wiki',
+        'wiki.plugins.attachments',
+        'wiki.plugins.notifications',
+        'wiki.plugins.images',
+        'wiki.plugins.macros',
+)
 
+SITE_ID = 1
+
+# Disable creating new accounts from the wiki
+WIKI_ACCOUNT_HANDLING = False
+WIKI_ACCOUNT_SIGNUP_ALLOWED = False
+
+TEMPLATES[0]['OPTIONS']['context_processors'] += ['sekizai.context_processors.sekizai']
 ######################################################################
 # Contrib config
 ######################################################################
