@@ -55,6 +55,7 @@ WEBSOCKET_CLIENT_ENABLED = True
 WEBSOCKET_CLIENT_PORT = 4005
 # Internal Server-Portal port. Not visible.
 AMP_PORT = 4006
+SERVER_SESSION_CLASS = 'evennia.contrib.security.auditing.server.AuditedServerSession'
 INSTALLED_APPS += (
         'django.contrib.humanize',
         'django_nyt',
