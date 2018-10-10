@@ -11,4 +11,4 @@ install:
 script:
   - evennia migrate
   - evennia --settings settings.py test evennia
-  - evennia test
+  - evennia --settings settings.py test
